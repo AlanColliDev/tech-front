@@ -3,10 +3,11 @@ import ReactDOM from 'react-dom/client'
 import App from './App'
 import './assets/Index.css'
 import { AlumnoContextProvider } from './context/AlumnoContextProvider';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { createBrowserRouter, createHashRouter, RouterProvider } from 'react-router-dom';
 import { FormAlumno } from './FormAlumno';
 
-const router = createBrowserRouter([
+// const router = createBrowserRouter([
+	const router = createHashRouter([
 	{
 		path:'/store/:matricula',
 		element: <FormAlumno />
